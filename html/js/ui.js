@@ -63,7 +63,7 @@ function process_speech() {
 	input_speech = encodeURI($('#speech_entry').val());
 	console.log(input_speech);
 	$.ajax({
-		url: "http://34.125.185.155/predict/predict?text="+input_speech,
+		url: "http://<EXTERNALIP>/predict/predict?text="+input_speech,
 		type: 'POST',
 		context: "json"
 	}).done(function(data) {
