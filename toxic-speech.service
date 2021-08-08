@@ -1,0 +1,12 @@
+[Unit]
+Description=Speech Classifier Flask App
+After=network.target
+
+[Service]
+User=jed_villanueva86
+WorkingDirectory=/var/www/flaskapi/flaskapi
+ExecStart=/usr/bin/python /var/www/flaskapi/flaskapi/__init__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
