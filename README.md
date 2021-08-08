@@ -15,14 +15,17 @@ pillow
 autocorrect
 tensorflow
 
+NOTES:
+GCP Compute instance provides two IPs. One INTERNAL and one EXTERNAL.
+Follow the instructions with those addresses.
 
 Setup Notes:
 1. Enable Proxy and Proxy_http on Apache2
 
-  ProxyPass /predict/ http://local IP:5000/
+  ProxyPass /predict/ http://INTERNAL_IP:5000/
   
-  ProxyPassReverse /predict/ http://local IP:5000/
+  ProxyPassReverse /predict/ http://INTERNAL_IP:5000/
   
 2. Change in ui.js the IP address to the EXTERNAL IP  
-3. Run the flask app with '0.0.0.0'. This will run the app with the INTERNAL LOCAL IP not localhost/127.0.0.1.
-4. Change /etc/hosts -> "local IP localhost"
+3. Run the flask app with '0.0.0.0'. This will run the app with the INTERNAL IP not localhost/127.0.0.1.
+4. Change /etc/hosts -> "INTERNAL_IP localhost"
