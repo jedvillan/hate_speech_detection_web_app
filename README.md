@@ -52,3 +52,6 @@ Setup Notes:
 4. Change /etc/hosts
 
 ```INTERNAL_IP localhost```
+
+5. Copy toxic-speech.service to /etc/systemd/system
+6. ```sudo systemctl daemon-reload; sudo systemctl start toxic-speech; sudo systemctl status toxic-speech```
